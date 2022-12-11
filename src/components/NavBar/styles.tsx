@@ -576,6 +576,74 @@ export const On_cart_img = styled.div`
     height: 33%;
 `
 
+export const Search_text_box = styled.div`
+    width: 315px;
+    height: 64px;
 
+`
+
+
+
+
+export const Search_result_container = styled.div`
+    width: 90%;
+    height: 150px;
+    position: absolute;
+    top: 259px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.95);
+
+
+`
+export const Search_result_table = styled.div`
+    width: 80%;
+    height: fit-content;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+
+
+`
+
+export const Search_result_text = styled.h1`
+
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 1.97px;
+    margin: 0%;
+    color: #000000;
+
+`
+export const nothing = styled.div`
+    display: none;
+`
+
+
+export const Search_text_p = styled.h1`
+
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1.97px;
+    margin: 0%;
+    color: #000000;
+
+`
+
+export const Search_containerSec = styled.div`
+    width: 100%;
+    height: 100%;
+
+
+`
 
 

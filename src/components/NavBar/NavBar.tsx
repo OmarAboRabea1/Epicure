@@ -120,6 +120,7 @@ const NavBar=()=>{
                 <Search_box>
                     <On_search_img/>
                     <Search_input placeholder="Search for restaurant cuisine, chef"/>
+                    
                 </Search_box>
             </Search_active>
 
