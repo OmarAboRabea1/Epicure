@@ -37,7 +37,38 @@ export const SearchBar = ()=>{
                         <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
                     </Search_box>
                 </SearchBar_box>
-                <SearchSuggestions/>
+                {
+                    search.length > 0 && (data.nodes.length> 0 || results2.nodes.length> 0 || results3.nodes.length> 0) &&
+                <Search_result_container>
+                    
+                    <Search_result_table>
+                    {data.nodes.length>0 &&
+                    <Search_text_p>Restaurants:</Search_text_p>
+                    }
+                    <>
+                    {data.nodes.map(item=>{
+                        return <a href="#">{item.name}</a>
+                    })}
+                    </>
+                    {results2.nodes.length>0 &&
+                    <Search_text_p>Dishes:</Search_text_p>
+                    }
+                    <>
+                    {results2.nodes.map(item=>{
+                        return <a href="#">{item.name}</a> 
+                    })}
+                    </>
+                    {results3.nodes.length>0 &&
+                    <Search_text_p>Chefs:</Search_text_p>
+                    }                   
+                    <>
+                    {results3.nodes.map(item=>{
+                        return <a href="#">{item.name}</a>
+                    })}
+                    </>
+                    </Search_result_table>
+                </Search_result_container>
+                }
             </Hero_box>
 
         </Search_Container>

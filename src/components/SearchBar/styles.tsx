@@ -162,7 +162,7 @@ export const Search_text_p = styled.h1`
 
 export const Search_containerSec = styled.div`
     width: 100%;
-    height: 100%;;
+    height: 100%;
 
 
 `
