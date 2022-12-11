@@ -1,5 +1,5 @@
 
-import {AllRes_box, AllRes_click, AllRes_click_arrows, Title} from "../PopularRes/styles";
+import {Title} from "../PopularRes/styles";
 import { AboutUsContainer, AboutUsDesc, AboutUsimages, AppleStore_image, EpicureLogo_image, PlayStore_image, Stores_box } from "./styles";
 
 

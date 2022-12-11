@@ -1,5 +1,4 @@
 import { Card_container2, ResChef, ResName, RestaurantCard, RestaurantCard_desc, RestaurantCard_img } from "./styles"
-import { AllRestaurants } from "../../assests/Data"
 import { Restaurant } from "../../assests/Types"
 
 interface cardProps{

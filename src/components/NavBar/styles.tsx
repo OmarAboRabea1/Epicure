@@ -1,13 +1,13 @@
 import React ,{ useEffect, useState } from "react";
 import styled from "styled-components"
-import logo from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/restaurant logo.png";
-import search_icon_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/searchIcon.png";
-import user_icon_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/userIcon.png";
-import cart_icon_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/cartIcon.png";
-import theX from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/theX.svg";
-import cart_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/cart_img.svg";
-import search_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/search_img.svg";
-import or_line from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/or_line.svg";
+import logo from "../../assests/restaurant logo.png";
+import search_icon_img from "../../assests/searchIcon.png";
+import user_icon_img from "../../assests/userIcon.png";
+import cart_icon_img from "../../assests/cartIcon.png";
+import theX from "../../assests/theX.svg";
+import cart_img from "../../assests/cart_img.svg";
+import search_img from "../../assests/search_img.svg";
+import or_line from "../../assests/or_line.svg";
 
 
 import { isPropertySignature } from "typescript";
@@ -585,20 +585,6 @@ export const Search_text_box = styled.div`
 
 
 
-export const Search_result_container = styled.div`
-    width: 90%;
-    height: 150px;
-    position: absolute;
-    top: 259px;
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-y: scroll;
-    background: rgba(255, 255, 255, 0.95);
-
-
-`
 export const Search_result_table = styled.div`
     width: 80%;
     height: fit-content;
@@ -647,3 +633,17 @@ export const Search_containerSec = styled.div`
 `
 
 
+export const Search_result_newContainer = styled.div`
+    width: 90%;
+    height: 150px;
+    position: absolute;
+    top: 59px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.95);
+
+
+`

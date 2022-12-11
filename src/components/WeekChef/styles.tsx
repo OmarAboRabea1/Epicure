@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import yossi from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/yossi.svg"
-import onza_Res from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/onza.svg"
+import yossi from "../../assests/yossi.svg"
+import onza_Res from "../../assests/onza.svg"
 
 export const WeekChefContainer = styled.div`
     width: 100%;

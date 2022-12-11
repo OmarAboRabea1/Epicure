@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import claro_Res from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/Claro_Res.svg"
-import spicy from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/spicy.svg"
-import shekel_sign from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/shekel_sign.svg"
+import claro_Res from "../../assests/Claro_Res.svg"
+import spicy from "../../assests/spicy.svg"
+import shekel_sign from "../../assests/shekel_sign.svg"
 
 
 export const SignatureDish_Container = styled.div`

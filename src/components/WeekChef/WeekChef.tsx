@@ -1,11 +1,7 @@
-import { ResCardSwiper } from "../PopularRes/ResCardSwiper"
 import { Title } from "../Signature/styles"
 import { ChefDesc_box, ChefImage_box, ChefName_box, ChefName_text, Chef_image, WeekChefContainer } from "./styles"
 import {AllRes_box, AllRes_click, AllRes_click_arrows, Swiper_container} from "../PopularRes/styles";
-import { AllChefs } from "../../assests/Data";
 import { ChefResCard } from "./ChefResCard";
-import { AllRestaurants } from "../../assests/Data"
-import { Restaurant } from "../../assests/Types"
 import { chef_const } from "../../constants/Restaurants4Chefs";
 import { GetRestaurants } from "../../Helpers/GetRestaurants";
 

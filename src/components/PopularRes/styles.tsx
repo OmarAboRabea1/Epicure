@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import claro_Res from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/Claro_Res.svg"
-import arrows from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/arrows.svg"
+import claro_Res from "../../assests/Claro_Res.svg"
+import arrows from "../../assests/arrows.svg"
 
 
 export const PopualrRes_Container = styled.div`

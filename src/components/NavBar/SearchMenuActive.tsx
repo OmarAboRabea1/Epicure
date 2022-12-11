@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { AllChefs, AllDishes, AllRestaurants, search_names } from "../../assests/Data"
-import { Search_Container, Hero_box, SearchBar_box, Search_box, Search_input, Search_text_h1, On_search_img, Search_text_box, Search_result_table, Search_result_container, Search_text_p } from "./styles"
+import { Search_active, Search_box, Search_input, On_search_img, Search_result_newContainer } from "./styles";
+import { Search_result_table, Search_result_container, Search_text_p } from "../SearchBar/styles"
 
-
-
-export const SearchBar = ()=>{
+interface props{
+    menu : boolean
+}
+export const SearchMenuActive =(funcProops: props)=>{
     const [search, setSearch] = useState('');
 
     const handleSearch = (event:React.ChangeEvent<HTMLInputElement>) => {
@@ -27,18 +29,14 @@ export const SearchBar = ()=>{
         ),
       };
     return(
-        <Search_Container>
-            <Hero_box>
-                <SearchBar_box>
-                    <Search_text_h1>Epicure works with the top chef restaurants in Tel Aviv</Search_text_h1>
-                    <Search_box>
-                        <On_search_img/>
-                        <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
-                    </Search_box>
-                </SearchBar_box>
-                {
+
+        <Search_active active = {funcProops.menu}>
+        <Search_box>
+            <On_search_img/>
+            <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
+            {
                     search.length > 0 && (data.nodes.length> 0 || results2.nodes.length> 0 || results3.nodes.length> 0) &&
-                <Search_result_container>
+                <Search_result_newContainer>
                     
                     <Search_result_table>
                     {data.nodes.length>0 &&
@@ -66,10 +64,10 @@ export const SearchBar = ()=>{
                     })}
                     </>
                     </Search_result_table>
-                </Search_result_container>
+                </Search_result_newContainer>
                 }
-            </Hero_box>
-
-        </Search_Container>
+        </Search_box>
+    </Search_active>
     )
+
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import spicy from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/spicy.svg"
-import vegetarian from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/vegetarian.svg"
-import vegan from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/vegan.svg"
+import spicy from "../../assests/spicy.svg"
+import vegetarian from "../../assests/vegetarian.svg"
+import vegan from "../../assests/vegan.svg"
 
 
 export const Signature_Container = styled.div`

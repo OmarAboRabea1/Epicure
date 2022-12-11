@@ -1,9 +1,9 @@
 import { Chef, Dish, Restaurant } from "./Types";
-import restaurantPic from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/Claro_Res.svg";
-import chefIMG from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/yossi.svg";
-import spicy from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/spicy.svg"
-import vegan from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/vegan.svg";
-import vegetarian from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/vegetarian.svg";
+import restaurantPic from "../assests/Claro_Res.svg";
+import chefIMG from "../assests/yossi.svg";
+import spicy from "../assests/spicy.svg"
+import vegan from "../assests/vegan.svg";
+import vegetarian from "../assests/vegetarian.svg";
 import { PrepareSearchData } from "../Helpers/PrepareSearchData";
 
 export interface SearchNames{
