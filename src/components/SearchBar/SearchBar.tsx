@@ -1,0 +1,45 @@
+import { useState } from "react";
+import { AllChefs, AllDishes, AllRestaurants, search_names } from "../../assests/Data"
+import { Search_Container, Hero_box, SearchBar_box, Search_box, Search_input, Search_text_h1, On_search_img, Search_text_box, Search_result_table, Search_result_container, Search_text_p } from "./styles"
+import { Table } from '@table-library/react-table-library/table';
+import { SearchSuggestions } from "./SearchSuggestions";
+
+
+export const SearchBar = ()=>{
+    const [search, setSearch] = useState('');
+
+    const handleSearch = (event:React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(event.target.value);
+      };
+    
+      var data = {
+        nodes: AllRestaurants.filter((item) =>
+          item.name.toLowerCase().includes(search.toLowerCase())
+        ),
+      };
+      var results2 = {
+        nodes: AllDishes.filter((item) =>
+          item.name.toLowerCase().includes(search.toLowerCase())
+        ),
+      };
+      var results3 = {
+        nodes: AllChefs.filter((item) =>
+          item.name.toLowerCase().includes(search.toLowerCase())
+        ),
+      };
+    return(
+        <Search_Container>
+            <Hero_box>
+                <SearchBar_box>
+                    <Search_text_h1>Epicure works with the top chef restaurants in Tel Aviv</Search_text_h1>
+                    <Search_box>
+                        <On_search_img/>
+                        <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
+                    </Search_box>
+                </SearchBar_box>
+                <SearchSuggestions/>
+            </Hero_box>
+
+        </Search_Container>
+    )
+}
