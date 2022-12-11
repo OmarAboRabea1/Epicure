@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import epicure_logo from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/epicure_logo.svg"
-import playStore from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/playStore.svg"
-import appleStore from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/appleStore.svg"
+import epicure_logo from "../../assests/epicure_logo.svg"
+import playStore from "../../assests/playStore.svg"
+import appleStore from "../../assests/appleStore.svg"
 
 
 export const AboutUsContainer = styled.div`

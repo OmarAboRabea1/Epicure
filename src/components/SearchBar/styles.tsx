@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import heroSearch from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/hero-picture-search.svg";
-import search_img from "C:/Users/omar_/Desktop/HW/Tsofen/4-theProject/restaurants-project/src/assests/search_img.svg";
+import heroSearch from "../../assests/hero-picture-search.svg";
+import search_img from "../../assests/search_img.svg";
 
 
 export const Search_Container = styled.div`
