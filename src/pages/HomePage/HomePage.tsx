@@ -8,12 +8,27 @@ import { SignatureFilter } from "../../components/Signature/SignatureFilter"
 import { SignatureDish } from "../../components/SignatureDish/SignatureDish"
 import { WeekChef } from "../../components/WeekChef/WeekChef"
 import { Container, Container2 } from "./styles"
+import React ,{ useEffect, useState } from "react";
+import { DesktopSearchBar } from "../../components/Desktop/DesktopSearchBar/SearchBar"
+
 
 const HomePage=()=>{
+    const [windowSize, setWindowSize] = useState<Number>()
+    useEffect(()=>{
+        setWindowSize(window.innerWidth)
+        console.log(windowSize)
+    })
     return(
         <Container>
             <Header/>
-            <SearchBar/>
+            <>{windowSize! < 1024 &&
+                <SearchBar/>
+            }
+            </>
+            <>{windowSize! >= 1024 &&
+            <DesktopSearchBar/>
+            }
+            </>
             <PopularRes/>
             <SignatureDish/>
             <SignatureFilter/>

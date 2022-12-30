@@ -5,16 +5,18 @@ import { MenuIsActive } from "./MenuActive";
 import { SearchMenuActive } from "./SearchMenuActive";
 
 
-import { Nav_Container, StyledNavBar, Left_nav, Right_nav_visible, Center_nav_visible, Hamburger, Burger_bar, Logo_img, SearchIcon, UserIcon, 
-    CartIcon,  Cart_active, TheX, On_cart, On_cart_img, Search_text, Search_text_h1, Box_for_serch } from "./styles";
+import { Nav_Container, StyledNavBar, Left_nav, Right_nav_visible, Logo_img, SearchIcon, UserIcon, 
+    CartIcon, Text_box, NavBar_text, NavBar_text2 } from "./styles";
 import { UserMenuActive } from "./UserMenuActive";
 
-const NavBar=()=>{
+const DesktopNavBar=()=>{
 
     const [burgerMenu, setBurger] = useState<boolean>(false)
     const [searchMenu, setSearch] = useState<boolean>(false)
     const [userMenu, setUser] = useState<boolean>(false)
     const [cartMenu, setCart] = useState<boolean>(false)
+
+
 
     useEffect(()=>{
         initialize();
@@ -73,32 +75,29 @@ const NavBar=()=>{
         <Nav_Container>
             <StyledNavBar>
                 <Left_nav>
-                    <TheX active = {burgerMenu || searchMenu || userMenu || cartMenu } onClick={()=>{setBurger(false); setSearch(false); setCart(false); setUser(false)}}/>
-                    <Hamburger  active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)} onClick={()=>{setBurger(true) }}>
-                        <Burger_bar/>
-                        <Burger_bar/>
-                        <Burger_bar/>
-                    </Hamburger>
-                </Left_nav>
-                <Center_nav_visible active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)}>
                     <Logo_img/>
-                </Center_nav_visible>
+                    <Text_box>
+                        <NavBar_text>Epicure</NavBar_text>
+                    </Text_box>
+                    <Text_box>
+                        <NavBar_text2 href="/Restaurants">Restaurants</NavBar_text2>
+                    </Text_box>
+                    <Text_box>
+                        <NavBar_text2 href="/Chefs">Chefs</NavBar_text2>
+                    </Text_box>
+                </Left_nav>
                 <Right_nav_visible active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)}>
-                    <SearchIcon onClick={()=>{setSearch(true) }}/>
-                    <UserIcon onClick={()=>{setUser(true) }}/>
-                    <CartIcon onClick={()=>{setCart(true) }}/>
+                    <SearchIcon onClick={()=>{searchMenu && setSearch(false) || searchMenu!=true && setSearch(true)}}/>
+                    <UserIcon onClick={()=>{userMenu && setUser(false) || userMenu!=true && setUser(true)}}/>
+                    <CartIcon onClick={()=>{cartMenu && setCart(false) || cartMenu!=true && setCart(true)}}/>
                 </Right_nav_visible>
-                <Search_text active ={searchMenu}>
-                    <Box_for_serch>
-                        <Search_text_h1>Search</Search_text_h1>
-                    </Box_for_serch>
-                </Search_text>
             </StyledNavBar>            
             <MenuIsActive menu = {burgerMenu}/>
             <SearchMenuActive menu={searchMenu}/>
             <UserMenuActive menu = {userMenu}/>
             <CartMenuActive menu = {cartMenu}/>
         </Nav_Container>
+        
     )
 }
-export default NavBar;
+export default DesktopNavBar;

@@ -1,13 +1,13 @@
 import React ,{ useEffect, useState } from "react";
 import styled from "styled-components"
-import logo from "../../assests/restaurant logo.png";
-import search_icon_img from "../../assests/searchIcon.png";
-import user_icon_img from "../../assests/userIcon.png";
-import cart_icon_img from "../../assests/cartIcon.png";
-import theX from "../../assests/theX.svg";
-import cart_img from "../../assests/cart_img.svg";
-import search_img from "../../assests/search_img.svg";
-import or_line from "../../assests/or_line.svg";
+import logo from "../../../assests/restaurant logo.png";
+import search_icon_img from "../../../assests/searchIcon.png";
+import user_icon_img from "../../../assests/userIcon.png";
+import cart_icon_img from "../../../assests/cartIcon.png";
+import theX from "../../../assests/theX.svg";
+import cart_img from "../../../assests/cart_img.svg";
+import search_img from "../../../assests/search_img.svg";
+import or_line from "../../../assests/or_line.svg";
 
 
 import { isPropertySignature } from "typescript";
@@ -17,6 +17,7 @@ export const Nav_Container = styled.div`
     display: flex;
     width: 100%;
     height: 50px;
+    justify-content: center;
     align-items: center;
     background: #ffffff;
     box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
@@ -27,9 +28,8 @@ export const StyledNavBar = styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
-    margin: 10px;
 
 `
 export const Left_nav = styled.div.attrs((props: {active: boolean}) => props)
@@ -39,36 +39,55 @@ export const Left_nav = styled.div.attrs((props: {active: boolean}) => props)
     display: flex;
     width: fit-content;
     height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
 
 
 `
+export const Text_box = styled.div`
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+`
 
+export const NavBar_text = styled.p`
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 27px;
+    line-height: 33px;
+    letter-spacing: 1.35px;
+    color: #000000;
+
+
+
+`
+export const NavBar_text2 = styled.a`
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.92px;
+    color: #000000;
+    text-decoration: none;
+
+
+`
 export const Right_nav_visible = styled.div.attrs((props: {active: boolean}) => props)`
 
-    ${props => props.active === false && `
-        display: none
-    `}
-    ${props => props.active === true && `
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 15px;
-    `}
-
-`
-
-export const Center_nav_visible = styled.div.attrs((props: {active: boolean}) => props)`
-
-     ${props => props.active === false && `
-        display: none;
-    `}
-    ${props => props.active === true && `
-        display: flex;
-        padding-left: 50px;
-    `}
-
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+    
 
 `
 
@@ -78,39 +97,6 @@ export const Right_nav_hidden = styled.div`
     display: none;
 `
 
-
-export const Hamburger = styled.div.attrs((props: {active: boolean}) => props)`
-
-    ${props => props.active === false && `
-            display: none
-        `}
-        ${props => props.active === true && `
-            height: 8px;
-            width: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
-            cursor: pointer;
-            padding: 4px;
-        `}
-   
-`
-
-export const TheX = styled.div.attrs((props: {active: boolean}) => props)`
-
-     ${props => props.active === false && `
-        display: none
-    `}
-    ${props => props.active === true && `
-        background-image: url(${theX});
-        background-repeat: no-repeat;
-        width: 25px;
-        height: 25px;
-    `}
-
-
-`
 
 
 const search_icon = styled.div`
@@ -166,15 +152,6 @@ const center_nav_hidden  = styled.div`
     display: none;
 `
 
-
-
-
-export const Burger_bar  = styled.div`
-    width: 16px;
-    height: 0px;
-    color: #000;
-    border: 1px solid rgba(0, 0, 0, 0.9);
-`
 
 
 const menu  = styled.div`
@@ -301,6 +278,7 @@ export const On_search_img = styled.div`
     background-image: url(${search_img});
     width: 6.3%;
     height: 68%;
+    background-repeat: no-repeat;
 `
 
 export const Search_text_h1 = styled.h1`
@@ -523,12 +501,14 @@ export const Cart_active = styled.div.attrs((props: {active: boolean}) => props)
     `}
     ${props => props.active === true && `
         display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        right: 0;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        width: 100%;
-        height: 185px;
-        top: 35px;
+        width: 30%;
+        height: 585px;
+        top: 50px;
         background: #ffffff;
         box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
     `}
@@ -544,7 +524,7 @@ export const On_cart = styled.div`
     padding-top: 20px;
     gap: 10px;
     width: 47%;
-    height: 80%;
+    height: 60%;
     background: #ffffff;
 
     h1{
@@ -567,7 +547,7 @@ export const Box_for_img = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 35%;
-    height: 40%;
+    height: 15%;
 `
 export const On_cart_img = styled.div`
 
@@ -582,8 +562,28 @@ export const Search_text_box = styled.div`
     height: 64px;
 
 `
+export const Order_history_box = styled.div`
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    border: 1px solid #000000;
 
-
+`
+export const Order_history_text = styled.a`
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2.67px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+`
 
 
 export const Search_result_table = styled.div`

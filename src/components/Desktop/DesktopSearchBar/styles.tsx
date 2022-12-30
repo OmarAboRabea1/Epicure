@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import heroSearch from "../../assests/hero-picture-search.svg";
-import search_img from "../../assests/search_img.svg";
+import heroSearch from "../../../assests/hero-picture-search.svg";
+import search_img from "../../../assests/search_img.svg";
 
 
 export const Search_Container = styled.div`
@@ -16,19 +16,14 @@ export const Hero_box = styled.div`
     align-items: center;
     top: 50px;
     width: 100%;
-    height: 273px;
+    height: 696px;
     background:url(${heroSearch});
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-`
-export const Hero_image = styled.div`
-    width: 100%;
-    height: 100%;
-    background:url(${heroSearch});
+    background-size: 100vmax;
     background-repeat: no-repeat;
-    background-position: center;
-`
+
+
+`   
 
 export const SearchBar_box = styled.div`
     display: flex;
@@ -39,19 +34,22 @@ export const SearchBar_box = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     gap: 18px;
-    width: 85%;
-    height: 60%;
+    width: 60%;
+    height: 27%;
     background: rgba(255, 255, 255, 0.88);
+
 `
 
 export const Search_box = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 100%;
+    width: 70%;
     height: 30px;
     border: 0.5px solid #000000;
     border-radius: 4px;
+
+
 `
 
 export const Search_input = styled.input`
@@ -67,8 +65,11 @@ export const Search_input = styled.input`
     background: none;
     color: #000000;
     outline: none;
+
+
 `
 export const On_search_img = styled.div`
+
     background-image: url(${search_img});
     background-repeat: no-repeat;
     width: 25px;
@@ -78,12 +79,14 @@ export const On_search_img = styled.div`
 
 
 export const Search_text_box = styled.div`
-    width: 315px;
-    height: 64px;
+    width: 55%;
+    height: 33%;
+
 `
 
 
 export const Search_text_h1 = styled.h1`
+
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
@@ -91,6 +94,7 @@ export const Search_text_h1 = styled.h1`
     letter-spacing: 1.97px;
     margin: 0%;
     color: #000000;
+
 `
 
 
@@ -106,6 +110,8 @@ export const Search_result_container = styled.div`
     align-items: flex-start;
     overflow-y: scroll;
     background: rgba(255, 255, 255, 0.95);
+
+
 `
 export const Search_result_table = styled.div`
     width: 80%;
@@ -115,9 +121,12 @@ export const Search_result_table = styled.div`
     flex-direction: column;
     align-items: flex-start;
     overflow-y: scroll;
+
+
 `
 
 export const Search_result_text = styled.h1`
+
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
@@ -125,6 +134,7 @@ export const Search_result_text = styled.h1`
     letter-spacing: 1.97px;
     margin: 0%;
     color: #000000;
+
 `
 export const nothing = styled.div`
     display: none;
@@ -132,6 +142,7 @@ export const nothing = styled.div`
 
 
 export const Search_text_p = styled.h1`
+
     font-style: normal;
     font-weight: 200;
     font-size: 16px;
@@ -139,9 +150,12 @@ export const Search_text_p = styled.h1`
     letter-spacing: 1.97px;
     margin: 0%;
     color: #000000;
+
 `
 
 export const Search_containerSec = styled.div`
     width: 100%;
     height: 100%;
+
+
 `
