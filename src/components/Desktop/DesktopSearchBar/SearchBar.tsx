@@ -38,10 +38,10 @@ export const DesktopSearchBar = ()=>{
                   <Search_text_box>
                     <Search_text_h1>Epicure works with the top chef restaurants in Tel Aviv</Search_text_h1>
                   </Search_text_box>
-                    <Search_box>
-                        <On_search_img/>
-                        <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
-                    </Search_box>
+                  <Search_box>
+                      <On_search_img/>
+                      <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
+                  </Search_box>
                 </SearchBar_box>
                 {
                     search.length > 0 && (data.nodes.length> 0 || results2.nodes.length> 0 || results3.nodes.length> 0) &&

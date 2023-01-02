@@ -11,7 +11,6 @@ import { UserMenuActive } from "./UserMenuActive";
 
 const DesktopNavBar=()=>{
 
-    const [burgerMenu, setBurger] = useState<boolean>(false)
     const [searchMenu, setSearch] = useState<boolean>(false)
     const [userMenu, setUser] = useState<boolean>(false)
     const [cartMenu, setCart] = useState<boolean>(false)
@@ -86,13 +85,12 @@ const DesktopNavBar=()=>{
                         <NavBar_text2 href="/Chefs">Chefs</NavBar_text2>
                     </Text_box>
                 </Left_nav>
-                <Right_nav_visible active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)}>
+                <Right_nav_visible active = {(!searchMenu) && (!cartMenu) && (!userMenu)}>
                     <SearchIcon onClick={()=>{searchMenu && setSearch(false) || searchMenu!=true && setSearch(true)}}/>
                     <UserIcon onClick={()=>{userMenu && setUser(false) || userMenu!=true && setUser(true)}}/>
                     <CartIcon onClick={()=>{cartMenu && setCart(false) || cartMenu!=true && setCart(true)}}/>
                 </Right_nav_visible>
             </StyledNavBar>            
-            <MenuIsActive menu = {burgerMenu}/>
             <SearchMenuActive menu={searchMenu}/>
             <UserMenuActive menu = {userMenu}/>
             <CartMenuActive menu = {cartMenu}/>

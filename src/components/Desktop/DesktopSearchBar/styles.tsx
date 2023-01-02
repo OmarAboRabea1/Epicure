@@ -34,8 +34,8 @@ export const SearchBar_box = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     gap: 18px;
-    width: 60%;
-    height: 27%;
+    width: 52%;
+    height: 30%;
     background: rgba(255, 255, 255, 0.88);
 
 `
@@ -79,8 +79,8 @@ export const On_search_img = styled.div`
 
 
 export const Search_text_box = styled.div`
-    width: 55%;
-    height: 33%;
+    width: 60%;
+    height: 40%;
 
 `
 
@@ -89,7 +89,7 @@ export const Search_text_h1 = styled.h1`
 
     font-style: normal;
     font-weight: 200;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 32px;
     letter-spacing: 1.97px;
     margin: 0%;
