@@ -19,8 +19,8 @@ export const SignatureDish = ()=>{
                     }   
                 </Swiper_container>
             <AllRes_box>
-                <AllRes_click href="#">All Restaurants</AllRes_click>
-                <AllRes_click_arrows href="#"/>
+                <AllRes_click href="/Restaurants">All Restaurants</AllRes_click>
+                <AllRes_click_arrows href="/Restaurants"/>
             </AllRes_box>
         </SignatureDish_Container>
             
