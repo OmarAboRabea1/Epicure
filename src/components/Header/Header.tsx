@@ -13,7 +13,6 @@ const Header=()=>{
 
     useEffect(()=>{
         setWindowSize(size)
-        console.log(size)
     })
     
 

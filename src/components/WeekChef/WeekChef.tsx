@@ -4,7 +4,7 @@ import {AllRes_box, AllRes_click, AllRes_click_arrows, Swiper_container} from ".
 import { ChefResCard } from "./ChefResCard";
 import { chef_const } from "../../constants/Restaurants4Chefs";
 import { GetRestaurants } from "../../Helpers/GetRestaurants";
-
+import uniqid from "uniqid";
 let i = 0;
 
 
@@ -30,7 +30,7 @@ export const WeekChef=()=>{
                 {
                 restaurants.map((item, key) => (
                     
-                    <ChefResCard restaurant= {item} key={item.name[-1]}/>
+                    <ChefResCard restaurant= {item} key={uniqid()}/>
                 ))
                 }
         

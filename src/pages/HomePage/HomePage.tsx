@@ -24,7 +24,6 @@ const HomePage=()=>{
 
     useEffect(()=>{
         setWindowSize(size)
-        console.log(size)
     })
     return(
         <Container>
@@ -39,8 +38,7 @@ const HomePage=()=>{
                 <AboutUs/>
                 <Footer/>
                 </>
-            }
-            
+            }           
             {windowSize! >= 1024 &&
                 <>
                 <DesktopSearchBar/>
@@ -51,12 +49,8 @@ const HomePage=()=>{
                 <DesktopAboutUs/>
                 <DesktopFooter/>
                 </>
-            }
-            
-           
+            }  
         </Container>
-
-
     )
 }
 export default HomePage

@@ -1,9 +1,52 @@
-import { Container, UnderlinedSpan, Title, Title_box } from "./styles";
 
+import { AllRestaurants } from "../../assests/Data";
+import { ResCard } from "../../components/PopularRes/ResCard";
+import uniqid from "uniqid";
+
+import { Container, UnderlinedSpan, Title, Title_box, Cards_container } from "./styles";
+import { Restaurant } from "../../assests/Types";
+import { useEffect, useState } from "react";
+import { getHoursAndMinutes } from "../../Helpers/GetHoursAndMinutes";
+const restaurants = AllRestaurants;
+var openRestaurants: Array<Restaurant> = [] 
 const OpenRes=()=>{
+
+    const [filteredRes, setFilteredRes] = useState<Array<Restaurant>>([])
+
+    const filter_res=()=>{
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const timeString = `${hours}:${minutes}`;
+        restaurants.map((item:Restaurant) => {
+            const open_time = getHoursAndMinutes(item.openedAt[0]);
+            const close_time = getHoursAndMinutes(item.openedAt[1]);
+
+            if(hours > open_time.hours || (hours == open_time.hours && minutes>= open_time.minutes))
+            {
+                if(hours < close_time.hours || (hours == close_time.hours && minutes < close_time.minutes))
+                openRestaurants = openRestaurants.concat([] ,item)
+            }
+        });
+        return openRestaurants
+    }
+
+    useEffect(()=>{
+        const filteredRestaurants = filter_res();
+        setFilteredRes(filteredRestaurants)
+    },[])
+
+    
     return(
         <Container>
-            OpenRes
+            <Cards_container>
+                {
+                    filteredRes.map((item) => (
+                        
+                        <ResCard restaurant= {item} key={uniqid()}/>
+                    ))
+                }
+            </Cards_container>        
         </Container>
         
     )

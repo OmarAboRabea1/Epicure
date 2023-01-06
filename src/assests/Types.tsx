@@ -2,7 +2,8 @@ export interface Restaurant{
     name:string;
     owner:string;
     dishesID:number[];
-    hours:string;
+    openedAt:Array<string>;
+    establishedAt: String,
     picture:string;
 }
 

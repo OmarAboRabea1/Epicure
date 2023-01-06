@@ -7,7 +7,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 `
-
+export const Cards_container = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 25px;
+`
 export const Title_box = styled.div`
     width: 80%;
     height: fit-content;

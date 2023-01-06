@@ -9,8 +9,7 @@ import MostRes from "./MostRes";
 import OpenRes from "./OpenRes";
 
 const Restaurants=()=>{
-    const [underlinedWord, setUnderlinedWord] = useState<string | null>(null);
-    const [allRes, setAllRes] = useState(false)
+    const [allRes, setAllRes] = useState(true)
     const [newRes, setNewRes] = useState(false)
     const [mostRes, setMostRes] = useState(false)
     const [openRes, setOpenRes] = useState(false)

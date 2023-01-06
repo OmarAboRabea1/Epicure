@@ -19,35 +19,41 @@ export const AllRestaurants: Array<Restaurant> = [
         name: "Restaurant1",
         owner: "Chef1",
         dishesID: [1, 5, 6, 7],
-        hours: "10:00-22:00",
+        openedAt: ["10:00","22:00"],
+        establishedAt: "2009",
         picture: restaurantPic
     },
     {
         name: "Restaurant2",
         owner: "Chef2",
         dishesID: [1, 3, 7],
-        hours: "10:00-22:00",
+        openedAt: ["10:00","14:00"],
+        establishedAt: "2015",
         picture: restaurantPic
     },
     {
         name: "Restaurant3",
         owner: "Chef1",
         dishesID: [2, 3, 4],
-        hours: "10:00-22:00",
+        openedAt: ["10:00","14:00"],
+        establishedAt: "2005",
         picture: restaurantPic
     },
     {
         name: "Restaurant4",
         owner: "Chef1",
         dishesID: [4, 5, 6, 7],
-        hours: "10:00-22:00",
+        openedAt: ["14:00","22:00"],
+        establishedAt: "2023",
         picture: restaurantPic
+        
     },
     {
         name: "Restaurant5",
         owner: "Chef1",
         dishesID: [1, 2, 3, 5],
-        hours: "10:00-22:00",
+        openedAt: ["14:00","22:00"],
+        establishedAt: "2020",
         picture: restaurantPic
     }
 ]

@@ -5,7 +5,7 @@ type Props = {
     onChange: (arg1: boolean, arg2: boolean, arg3: boolean, arg4: boolean) => void;
   }
 const FilterBar: React.FC<Props> = ({ onChange })=>{
-    const [allRes, setAllRes] = useState<boolean>(false)
+    const [allRes, setAllRes] = useState<boolean>(true)
     const [newRes, setNewRes] = useState<boolean>(false)
     const [mostRes, setMostRes] = useState<boolean>(false)
     const [openRes, setOpenRes] = useState<boolean>(false)
