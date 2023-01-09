@@ -17,44 +17,44 @@ export interface SearchNames{
 export const AllRestaurants: Array<Restaurant> = [
     {
         name: "Restaurant1",
-        owner: "Chef1",
-        dishesID: [1, 5, 6, 7],
+        chef: "Chef1",
+        dishes: [1, 5, 6, 7],
         openedAt: ["10:00","22:00"],
         establishedAt: "2009",
-        picture: restaurantPic
+        img: restaurantPic
     },
     {
         name: "Restaurant2",
-        owner: "Chef2",
-        dishesID: [1, 3, 7],
+        chef: "Chef2",
+        dishes: [1, 3, 7],
         openedAt: ["10:00","14:00"],
         establishedAt: "2015",
-        picture: restaurantPic
+        img: restaurantPic
     },
     {
         name: "Restaurant3",
-        owner: "Chef1",
-        dishesID: [2, 3, 4],
+        chef: "Chef1",
+        dishes: [2, 3, 4],
         openedAt: ["10:00","14:00"],
         establishedAt: "2005",
-        picture: restaurantPic
+        img: restaurantPic
     },
     {
         name: "Restaurant4",
-        owner: "Chef1",
-        dishesID: [4, 5, 6, 7],
+        chef: "Chef1",
+        dishes: [4, 5, 6, 7],
         openedAt: ["14:00","22:00"],
         establishedAt: "2023",
-        picture: restaurantPic
+        img: restaurantPic
         
     },
     {
         name: "Restaurant5",
-        owner: "Chef1",
-        dishesID: [1, 2, 3, 5],
+        chef: "Chef1",
+        dishes: [1, 2, 3, 5],
         openedAt: ["14:00","22:00"],
         establishedAt: "2020",
-        picture: restaurantPic
+        img: restaurantPic
     }
 ]
 
@@ -63,49 +63,56 @@ export const AllDishes: Array<Dish> = [
         name: "Dish1",
         ingredients: ["salt", "something-else", "paper", "sugar", "milk"],
         picture: restaurantPic,
-        dishType: spicy,
+        category: spicy,
+        dishType: "launch",
         price: 88
     },
     {
         name: "Dish2",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: vegan,
+        category: vegan,
+        dishType: "dinner",
         price: 24
     },
     {
         name: "Dish3",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: vegetarian,
+        category: vegetarian,
+        dishType:"breakfast",
         price: 56
     },
     {
         name: "Dish4",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: spicy,
+        category: spicy,
+        dishType:"launch",
         price: 67
     },
     {
         name: "Dish5",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: spicy,
+        category: spicy,
+        dishType: "breakfast",
         price: 50
     },
     {
         name: "Dish6",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: vegan,
+        category: vegan,
+        dishType: "dinner",
         price: 49
     },
     {
         name: "Dish7",
         ingredients: ["salt", "something-else"],
         picture: restaurantPic,
-        dishType: spicy,
+        category: spicy,
+        dishType: "breakfast",
         price: 35
     },
 

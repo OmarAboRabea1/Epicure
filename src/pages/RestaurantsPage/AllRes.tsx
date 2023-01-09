@@ -1,4 +1,4 @@
-import { Container, UnderlinedSpan, Title, Title_box, Cards_container } from "./styles";
+import { Container, UnderlinedSpan, Title, Title_box, Cards_container, ResLink } from "./styles";
 import { AllRestaurants } from "../../assests/Data"
 import { ResCard } from "../../components/PopularRes/ResCard";
 import uniqid from "uniqid";
@@ -10,8 +10,10 @@ const AllRes=()=>{
             <Cards_container>
                 {
                     restaurants.map((item) => (
-                        
-                        <ResCard restaurant= {item} key={uniqid()}/>
+
+                        <ResLink href={item && "/Restaurants/" + item.name } key={uniqid()}>
+                            <ResCard restaurant= {item} key={uniqid()}/>
+                        </ResLink>
                     ))
                 }
             </Cards_container>

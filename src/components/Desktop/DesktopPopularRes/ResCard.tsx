@@ -11,7 +11,7 @@ export const ResCard=(restaurant: cardProps)=>{
                 <RestaurantCard_img/>
                 <RestaurantCard_desc>
                     <ResName>{restaurant.restaurant?.name}</ResName>                    
-                    <ResChef>{restaurant.restaurant?.owner}</ResChef>
+                    <ResChef>{restaurant.restaurant?.chef}</ResChef>
                 </RestaurantCard_desc>
             </RestaurantCard>
         </Card_container2>

@@ -1,16 +1,17 @@
 export interface Restaurant{
     name:string;
-    owner:string;
-    dishesID:number[];
+    chef:string;
+    dishes:number[];
     openedAt:Array<string>;
     establishedAt: String,
-    picture:string;
+    img:string;
 }
 
 export interface Dish{
     name:string;
     price:number;
     ingredients:string[];
+    category: string,
     dishType:string;
     picture:string;
 }

@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import { Container, UnderlinedSpan, Title, Title_box } from "./styles";
+import { Container, Title, Title_box } from "./styles";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import AllRes from "./AllRes";
 import NewRes from "./NewRes";
