@@ -1,20 +1,24 @@
 import { DishCard } from "./DishCard"
 import { SignatureDish_Container, Swiper_container, Title } from "./styles"
-import { AllDishes } from "../../assests/Data"
 import {AllRes_box, AllRes_click, AllRes_click_arrows} from "../PopularRes/styles";
+import { useSelector } from "react-redux";
+import { Dish, Restaurant } from "../../assests/Types";
 
-const Dishes = AllDishes.slice(0,4);
+
+
 
 
 export const SignatureDish = ()=>{
+    const alldishes = useSelector((state: any) => state.dishes.value)
+    const Dishes = alldishes.slice(0,4);
     return(
         <SignatureDish_Container>
             <Title>Signature Dish Of:</Title>
                 <Swiper_container>
                     {
-                    Dishes.map((item, key) => (
+                    Dishes.map((item:Dish, key:number) => (
                         
-                        <DishCard dish= {item} key={item.name}/>
+                        <DishCard dish= {item} key={key}/>
                     ))
                     }   
                 </Swiper_container>

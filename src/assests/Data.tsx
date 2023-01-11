@@ -60,60 +60,74 @@ export const AllRestaurants: Array<Restaurant> = [
 
 export const AllDishes: Array<Dish> = [
     {
-        name: "Dish1",
-        ingredients: ["salt", "something-else", "paper", "sugar", "milk"],
-        picture: restaurantPic,
-        category: spicy,
-        dishType: "launch",
-        price: 88
-    },
-    {
-        name: "Dish2",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
-        category: vegan,
-        dishType: "dinner",
-        price: 24
-    },
-    {
-        name: "Dish3",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
+        name:"Dish1",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
         category: vegetarian,
-        dishType:"breakfast",
-        price: 56
-    },
-    {
-        name: "Dish4",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
-        category: spicy,
-        dishType:"launch",
-        price: 67
-    },
-    {
-        name: "Dish5",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
-        category: spicy,
         dishType: "breakfast",
-        price: 50
     },
     {
-        name: "Dish6",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
-        category: vegan,
-        dishType: "dinner",
-        price: 49
-    },
-    {
-        name: "Dish7",
-        ingredients: ["salt", "something-else"],
-        picture: restaurantPic,
-        category: spicy,
+        name:"Dish2",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
         dishType: "breakfast",
-        price: 35
+    },
+    {
+        name:"Dish3",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
+        dishType: "breakfast",
+    },
+    {
+        name:"Dish4",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
+        dishType: "breakfast",
+    },
+    {
+        name:"Dish5",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
+        dishType: "breakfast",
+    },
+    {
+        name:"Dish6",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
+        dishType: "breakfast",
+    },
+    {
+        name:"Dish7",
+        restaurant:"claro",
+        describtion:"desc string",
+        img:restaurantPic,
+        price:60,
+        ingredients:["salt", "something-else"],
+        category: vegetarian,
+        dishType: "breakfast",
     },
 
 ]

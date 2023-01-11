@@ -9,11 +9,13 @@ export interface Restaurant{
 
 export interface Dish{
     name:string;
+    restaurant:string;
+    describtion:string;
+    img:string;
     price:number;
     ingredients:string[];
     category: string,
     dishType:string;
-    picture:string;
 }
 
 export interface Chef{

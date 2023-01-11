@@ -5,13 +5,20 @@ import { ChefResCard } from "./ChefResCard";
 import { chef_const } from "../../constants/Restaurants4Chefs";
 import { GetRestaurants } from "../../Helpers/GetRestaurants";
 import uniqid from "uniqid";
+import { useSelector } from "react-redux";
+import { Restaurant } from "../../assests/Types";
+import { useEffect, useState } from "react";
 let i = 0;
 
 
 export const WeekChef=()=>{
-
-    const restaurants = GetRestaurants();
-
+    const [res, setRes] = useState<any>()
+    useEffect(() => {
+      },)
+    const chef_with_retaurants = useSelector((state: any) => state.chef.value)
+    const restaurants = chef_with_retaurants[0];
+    // const restaurants = GetRestaurants()
+    console.log(restaurants)
 
     return(
         <WeekChefContainer>
@@ -28,9 +35,9 @@ export const WeekChef=()=>{
             <Title>Chef of the week:</Title>
             <Swiper_container>
                 {
-                restaurants.map((item, key) => (
+                restaurants.map((item:Restaurant, key:number) => (
                     
-                    <ChefResCard restaurant= {item} key={uniqid()}/>
+                    <ChefResCard restaurant= {item} key={key}/>
                 ))
                 }
         

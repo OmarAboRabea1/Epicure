@@ -1,0 +1,1 @@
+export const getChefUrl = "http://localhost:3001/api/chefs/getChef";
