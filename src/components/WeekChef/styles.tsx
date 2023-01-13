@@ -21,13 +21,9 @@ export const ChefImage_box = styled.div`
     
 `
 
-export const Chef_image = styled.div`
+export const Chef_image = styled.img`
     width: 100%;
     height: 100%;
-    background-image: url(${yossi});
-    background-repeat: no-repeat;
-    background-position: center;
-
 `
 
 export const ChefName_box = styled.div`
@@ -106,6 +102,12 @@ export const RestaurantCard_img = styled.div`
     width: 100%;
     background-image: url(${onza_Res}) ;
     background-repeat: no-repeat;
+
+
+`
+export const Restaurant_img = styled.img`
+    height: 100%;
+    width: 100%;
 
 
 `

@@ -13,20 +13,20 @@ let i = 0;
 
 export const WeekChef=()=>{
     const [res, setRes] = useState<any>()
-    useEffect(() => {
-      },)
+    
     const chef_with_retaurants = useSelector((state: any) => state.chef.value)
-    const restaurants = chef_with_retaurants[0];
-    // const restaurants = GetRestaurants()
-    console.log(restaurants)
+    // const restaurants = chef_with_retaurants[0];
+
 
     return(
+        <>
+        {chef_with_retaurants.length > 0 && 
         <WeekChefContainer>
             <Title>Chef of the week:</Title>
             <ChefImage_box>
-                <Chef_image/>
+                <Chef_image src={chef_with_retaurants[0].img}/>
                 <ChefName_box>
-                    <ChefName_text>{chef_const.name}</ChefName_text>
+                    <ChefName_text>{chef_with_retaurants[0].name}</ChefName_text>
                 </ChefName_box>
             </ChefImage_box>
             <ChefDesc_box>
@@ -35,7 +35,7 @@ export const WeekChef=()=>{
             <Title>Chef of the week:</Title>
             <Swiper_container>
                 {
-                restaurants.map((item:Restaurant, key:number) => (
+                chef_with_retaurants[0].restaurants.map((item:Restaurant, key:number) => (
                     
                     <ChefResCard restaurant= {item} key={key}/>
                 ))
@@ -47,7 +47,8 @@ export const WeekChef=()=>{
                 <AllRes_click_arrows href="/Restaurants"/>
             </AllRes_box>
         </WeekChefContainer>
-
+            }
+            </>
     )
     
 }

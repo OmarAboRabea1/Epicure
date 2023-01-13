@@ -1,6 +1,9 @@
 import styled from "styled-components"
 import claro_Res from "../../assests/Claro_Res.svg"
 import spicy from "../../assests/spicy.svg"
+import vegan from "../../assests/vegan.svg"
+import vegetarian from "../../assests/vegetarian.svg"
+import meat from "../../assests/meat3.jpeg"
 import shekel_sign from "../../assests/shekel_sign.svg"
 
 
@@ -49,7 +52,7 @@ export const Swiper_container = styled.div`
 
 export const DishesCard = styled.div`
     width: 245px;
-    height: 388px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -93,31 +96,58 @@ export const DishIngredients = styled.h1`
     color: #000000;
 `
 
-export const DishCard_img = styled.div`
+export const DishCard_img = styled.img`
     height: 40%;
     width: 100%;
-    background-image: url(${claro_Res}) ;
-    background-repeat: no-repeat;
 
 
 `
 
-export const DishCard_signature = styled.div`
-    height: 25%;
-    width: 100%;
-    background-image: url(${spicy}) ;
-    background-repeat: no-repeat;
+export const DishCard_signature = styled.div.attrs((props: {sigType: string}) => props)`
+    ${props => props.sigType === "Spicy" && `
+        height: 30%;
+        width: 100%;
+        background-image: url(${spicy});
+        background-position: flex-end;
+        background-repeat: no-repeat;
+
+    `}  
+    ${props => props.sigType === "Vegan" && `
+        height: 30%;
+        width: 100%;
+        background-image: url(${vegan});
+        background-position: flex-end;;
+        background-repeat: no-repeat;
+    `}
+        ${props => props.sigType === "Vegetarian" && `
+        height: 30%;
+        width: 100%;
+        background-image: url(${vegetarian});
+        background-position: flex-end;;
+        background-repeat: no-repeat;
+
+    `}
+        ${props => props.sigType === "Meat" && `
+        height: 25%;
+        width: 25%;
+        background-image: url(${meat});
+        background-position: flex-end;;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    `}
 
 
 `
 
 
 export const DishCard_price_box = styled.div`
-    height: 15%;
+    height: fit-content;
     width: 35%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    left: 0px;
 
 `
 export const DishPrice = styled.h1`
@@ -134,7 +164,7 @@ export const DishPrice = styled.h1`
 
 
 export const Shekel_sign = styled.div`
-    height: 45%;
+    height: 15px;
     width: 15%;
     background-image: url(${shekel_sign}) ;
     background-repeat: no-repeat;

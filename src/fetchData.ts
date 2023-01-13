@@ -1,5 +1,5 @@
 import { toast } from "react-toastify"
-import { getChefUrl } from "./constants/FetchConstants";
+import { getChefUrl, getDishUrl } from "./constants/FetchConstants";
 import axios from "axios";
 
 
@@ -35,19 +35,9 @@ export const getChef = async(param: string) => {
     const args = {
         name: param
     };
-    const formData = new FormData();
-    formData.append('name', param);
-    const header = {
-        "Accept": "*/*"
-    };
     try{
-        const fetch_response = await fetch(getChefUrl, { method: 'POST',
-        body: formData, headers: header}
-        ).then((data) => {
-            return data.json();
-        });
         const response = await axios.post(getChefUrl, args)
-        return fetch_response
+        return response.data
     } 
     catch(error: any){
         toast.error(error.message);
@@ -67,4 +57,21 @@ export const fetchDishesData = async () => {
     catch(error: any){
         toast.error(error.message);
     }
+}
+
+export const getDishesByID = async(param: number[]) => {
+    var data: any = []
+    param.forEach(async element => {
+        const args = {
+            name: element
+        };
+        try{
+            const response = await axios.post(getDishUrl, args)
+            data.concat(response.data)
+        } 
+        catch(error: any){
+            toast.error(error.message);
+        }
+    });
+    return data
 }

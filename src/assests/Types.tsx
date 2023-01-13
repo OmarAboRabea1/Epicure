@@ -5,6 +5,7 @@ export interface Restaurant{
     openedAt:Array<string>;
     establishedAt: String,
     img:string;
+    _id:number;
 }
 
 export interface Dish{

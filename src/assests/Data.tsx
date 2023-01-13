@@ -15,47 +15,47 @@ export interface SearchNames{
 
 
 export const AllRestaurants: Array<Restaurant> = [
-    {
-        name: "Restaurant1",
-        chef: "Chef1",
-        dishes: [1, 5, 6, 7],
-        openedAt: ["10:00","22:00"],
-        establishedAt: "2009",
-        img: restaurantPic
-    },
-    {
-        name: "Restaurant2",
-        chef: "Chef2",
-        dishes: [1, 3, 7],
-        openedAt: ["10:00","14:00"],
-        establishedAt: "2015",
-        img: restaurantPic
-    },
-    {
-        name: "Restaurant3",
-        chef: "Chef1",
-        dishes: [2, 3, 4],
-        openedAt: ["10:00","14:00"],
-        establishedAt: "2005",
-        img: restaurantPic
-    },
-    {
-        name: "Restaurant4",
-        chef: "Chef1",
-        dishes: [4, 5, 6, 7],
-        openedAt: ["14:00","22:00"],
-        establishedAt: "2023",
-        img: restaurantPic
+    // {
+    //     name: "Restaurant1",
+    //     chef: "Chef1",
+    //     dishes: [1, 5, 6, 7],
+    //     openedAt: ["10:00","22:00"],
+    //     establishedAt: "2009",
+    //     img: restaurantPic
+    // },
+    // {
+    //     name: "Restaurant2",
+    //     chef: "Chef2",
+    //     dishes: [1, 3, 7],
+    //     openedAt: ["10:00","14:00"],
+    //     establishedAt: "2015",
+    //     img: restaurantPic
+    // },
+    // {
+    //     name: "Restaurant3",
+    //     chef: "Chef1",
+    //     dishes: [2, 3, 4],
+    //     openedAt: ["10:00","14:00"],
+    //     establishedAt: "2005",
+    //     img: restaurantPic
+    // },
+    // {
+    //     name: "Restaurant4",
+    //     chef: "Chef1",
+    //     dishes: [4, 5, 6, 7],
+    //     openedAt: ["14:00","22:00"],
+    //     establishedAt: "2023",
+    //     img: restaurantPic
         
-    },
-    {
-        name: "Restaurant5",
-        chef: "Chef1",
-        dishes: [1, 2, 3, 5],
-        openedAt: ["14:00","22:00"],
-        establishedAt: "2020",
-        img: restaurantPic
-    }
+    // },
+    // {
+    //     name: "Restaurant5",
+    //     chef: "Chef1",
+    //     dishes: [1, 2, 3, 5],
+    //     openedAt: ["14:00","22:00"],
+    //     establishedAt: "2020",
+    //     img: restaurantPic
+    // }
 ]
 
 export const AllDishes: Array<Dish> = [
@@ -77,7 +77,7 @@ export const AllDishes: Array<Dish> = [
         price:60,
         ingredients:["salt", "something-else"],
         category: vegetarian,
-        dishType: "breakfast",
+        dishType: "launch",
     },
     {
         name:"Dish3",
@@ -87,7 +87,7 @@ export const AllDishes: Array<Dish> = [
         price:60,
         ingredients:["salt", "something-else"],
         category: vegetarian,
-        dishType: "breakfast",
+        dishType: "dinner",
     },
     {
         name:"Dish4",
@@ -117,7 +117,7 @@ export const AllDishes: Array<Dish> = [
         price:60,
         ingredients:["salt", "something-else"],
         category: vegetarian,
-        dishType: "breakfast",
+        dishType: "dinner",
     },
     {
         name:"Dish7",
@@ -127,7 +127,7 @@ export const AllDishes: Array<Dish> = [
         price:60,
         ingredients:["salt", "something-else"],
         category: vegetarian,
-        dishType: "breakfast",
+        dishType: "launch",
     },
 
 ]

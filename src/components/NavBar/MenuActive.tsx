@@ -1,4 +1,5 @@
 
+import { ResLink } from "../../pages/RestaurantsPage/styles";
 import { Menu_active, Res_box, Line, Contact_box} from "./styles";
 interface props{
     menu : boolean
@@ -7,8 +8,8 @@ export const MenuIsActive =(funcProops: props)=>{
     return(
         <Menu_active active = {funcProops.menu}>
         <Res_box>
-            <a> Restaurants</a>
-            <a> Chefs</a>
+            <ResLink href="/Restaurants"> Restaurants</ResLink>
+            <ResLink href="/Chefs"> Chefs </ResLink>
         </Res_box>
             
             <Line/>

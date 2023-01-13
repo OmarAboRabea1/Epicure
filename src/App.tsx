@@ -4,15 +4,17 @@ import './App.css';
 import Routing from './services/Routing';
 import { useDispatch } from 'react-redux';
 import { setRestaurants } from "./components/redux/restaurants/RestaurantsSlicer";
-import { fetchChefsData, fetchDishesData, fetchRestaurantsData, getChef } from './fetchData';
+import { fetchChefsData, fetchDishesData, fetchRestaurantsData, getChef, getDishesByID } from './fetchData';
 import { setChefs } from './components/redux/chefs/ChefsSlicer';
-import { setDishes } from './components/redux/dishes/DishesSlicer';
+import { setDishes, setDishID } from './components/redux/dishes/DishesSlicer';
 import { setChef } from './components/redux/chef/ChefSlicer';
+import { setDishArray } from './components/redux/dish/DishSlicer';
+import { useSelector } from 'react-redux';
 
 
 
 function App() {
-
+  const dishesID = useSelector((state: any) => state.dishesID.value)
   const dispatch = useDispatch();
   const fetchRestaurants = useCallback(async () => {
     const restaurants = await fetchRestaurantsData();
@@ -35,21 +37,31 @@ function App() {
   }, []);
 
   const fetchChef= useCallback(async () => {
-    const chef = await getChef("Gordon Ramsay");
+    var chef = await getChef("Gordon Ramsay");
     if(chef){
       dispatch(setChef(chef))
+      const newChef = chef
+      dispatch(setChef(newChef))
+
     }
-  }, []);
+  }, [getChef]);
+  const fetchDish= useCallback(async () => {
+    var dish = await getDishesByID(dishesID);
+    if(dish.length > 0){
+      dispatch(setDishArray(dish))
+    }
+  }, [getChef]);
 
 
 
 
   useEffect(() => {
+    fetchChef();
+    fetchDish();
     fetchRestaurants();
     fetchChefs();
     fetchDishes();
-    fetchChef();
-  }, [fetchRestaurants, fetchChefs, fetchDishes, getChef])
+  }, [fetchRestaurants, fetchChefs, fetchDish, getChef, fetchDishes])
 
 
 

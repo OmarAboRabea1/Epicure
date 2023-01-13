@@ -1,7 +1,8 @@
 import {  Swiper_container } from "./styles"
-import { ResCard } from "./ResCard"
+import ResCard  from "./ResCard"
 import { useSelector } from "react-redux";
 import { Restaurant } from "../../assests/Types";
+import { ResLink } from "../../pages/RestaurantsPage/styles";
 
 
 // const card_props = {
@@ -18,9 +19,11 @@ export const ResCardSwiper=()=>{
         <Swiper_container>
 
         {
-            restaurants.map((item: Restaurant, key: string) => (
+            restaurants.map((item: Restaurant, key: number) => (
                 
+                <ResLink href={item && "/Restaurants/" + item.name } key={key}>
                 <ResCard restaurant= {item} key={key}/>
+                </ResLink>
             ))
         }
         

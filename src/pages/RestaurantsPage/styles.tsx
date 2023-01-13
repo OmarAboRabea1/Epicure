@@ -81,3 +81,22 @@ export const Box = styled.div`
     flex-direction: row;
     gap: 10px;
 `
+export const Empty_Box = styled.div`
+
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+`
+export const Empty_text = styled.h1`
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    color: #000000;
+`

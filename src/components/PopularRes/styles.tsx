@@ -25,7 +25,7 @@ export const Title = styled.h1`
 `
 export const RestaurantCard = styled.div`
     width: 245px;
-    height: 232.8px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,7 +62,7 @@ export const ResChef = styled.h1`
     color: #000000;
 `
 
-export const RestaurantCard_img = styled.div`
+export const RestaurantCard_img2 = styled.div`
     height: 100%;
     width: 100%;
     background-image: url(${claro_Res}) ;
@@ -70,11 +70,9 @@ export const RestaurantCard_img = styled.div`
 
 
 `
-export const RestaurantCard_img2 = styled.div`
-    height: 152px;
-    background-image: url(${claro_Res}) ;
-    background-repeat: no-repeat;
-    
+export const RestaurantCard_img = styled.img`
+    height: 100%;
+    width: 100%;    
     
 `
 export const slider_thumbs = styled.div`
