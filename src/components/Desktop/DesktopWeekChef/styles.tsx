@@ -94,6 +94,13 @@ export const Container_for_cards = styled.div`
     flex-direction: row;
 
 `
+export const Container_for_cards3 = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+
+`
 export const RestaurantCard = styled.div`
     width: 170px;
     height: 232.8px;

@@ -14,6 +14,7 @@ export const DesktopContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 150px;
 `
 export const Cards_container = styled.div`
     width: 100%;
@@ -128,7 +129,7 @@ export const Box = styled.div`
 `
 export const Empty_Box = styled.div`
 
-    width: fit-content;
+    width: 50%;
     height: fit-content;
     display: flex;
     align-items: center;
@@ -139,9 +140,61 @@ export const Empty_text = styled.h1`
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 200;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: 1.92px;
     text-transform: uppercase;
     color: #000000;
+`
+export const ChefImage_box = styled.a`
+    width: 100%;
+    height: 300px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+`
+
+export const Chef_image = styled.img`
+    width: 75%;
+    height: 100%;
+
+`
+
+export const ChefName_box = styled.div`
+    width: 75%;
+    height: fit-content;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.8);
+`
+export const ChefName_text_box = styled.div`
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ChefName_text = styled.h1`
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    letter-spacing: 2.67px;
+    color: #000000;
+
+`
+export const WeekChefContainer = styled.div`
+    width: 40%;
+    height: 100%;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
 `

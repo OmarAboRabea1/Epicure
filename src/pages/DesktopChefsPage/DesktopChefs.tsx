@@ -2,13 +2,13 @@ import Header from "../../components/Header/Header";
 import { useState } from 'react';
 
 import { Container, Title, Title_box } from "./styles";
+import DesktopFooter from "../../components/Desktop/DesktopFooter/Footer";
 import AllChefs from "./AllChefs";
 import NewChefs from "./NewChefs";
 import MostChefs from "./MostChefs";
-import FilterBarForChefs from "../DesktopChefsPage/FilterBarForChefs";
-import Footer from "../../components/Footer/Footer";
+import FilterBarForChefs from "./FilterBarForChefs";
 
-const Chefs=()=>{
+const DesktopChefs=()=>{
     const [allRes, setAllRes] = useState(true)
     const [newRes, setNewRes] = useState(false)
     const [mostRes, setMostRes] = useState(false)
@@ -45,10 +45,10 @@ const Chefs=()=>{
                 <MostChefs/>
                 </>
             }            
-            <Footer/>      
+            <DesktopFooter/>      
 
         </Container>
         
     )
 }
-export default Chefs;
+export default DesktopChefs;

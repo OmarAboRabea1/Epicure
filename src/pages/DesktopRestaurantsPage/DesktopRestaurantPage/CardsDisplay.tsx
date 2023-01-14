@@ -7,6 +7,7 @@ import filter from 'lodash/filter';
 import { useSelector } from "react-redux";
 import FilterInResPage from "../../../components/Desktop/DesktopFilterInResPage/FilterInResPage";
 import { DishCard } from "../../../components/Desktop/DesktopSignatureDish/DishCard";
+import Filter from "./Filters";
 
 const CardsDisplay=()=>{
 
@@ -44,6 +45,7 @@ const handleChange = (arg1: boolean, arg2: boolean, arg3: boolean, arg4: boolean
         {all_dishes.length > 0 && 
         <Container>
             <FilterInResPage onChange={handleChange}/>
+            <Filter/>
                 <Cards_container2>
                 {
                     choosedDishes.map((item: Dish, key:number) => (

@@ -2,7 +2,7 @@ import {useParams} from "react-router-dom";
 import uniqid from "uniqid";
 import { getHoursAndMinutes } from "../../../Helpers/GetHoursAndMinutes";
 import clockIcon from "../../../assests/Icon/Clock.svg"
-import { Container, Cards_container, ResImg, Res_container, Title, Secondary_title, Description, Box, ResImg_box } from "../styles";
+import { Container, Cards_container, ResImg, Res_container, Title, Secondary_title, Description, Box, ResImg_box, ClockImg } from "../styles";
 import Header from "../../../components/Header/Header";
 import { AllDishes, AllRestaurants } from "../../../assests/Data";
 import { Dish, Restaurant } from "../../../assests/Types";
@@ -49,7 +49,7 @@ const is_open=(item:Restaurant)=>{
                             {
                                 is_open(item)==true &&
                                 <Box>
-                                <ResImg src={clockIcon} key={key}/>
+                                <ClockImg src={clockIcon} key={key}/>
                                 <Secondary_title>Open now</Secondary_title>
                                 </Box> 
                             }

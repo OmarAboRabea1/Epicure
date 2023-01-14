@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import SetWindowSize from "../Helpers/SetWindowSize";
+import ChefPage from "../pages/ChefsPage/ChefPage/ChefPage";
 import Chefs from "../pages/ChefsPage/Chefs";
+import DesktopChefPage from "../pages/DesktopChefsPage/DesktopChefPage/DesktopChefPage";
+import DesktopChefs from "../pages/DesktopChefsPage/DesktopChefs";
 import DesktopRestaurantPage from "../pages/DesktopRestaurantsPage/DesktopRestaurantPage/Restaurant";
 import DesktopRestaurants from "../pages/DesktopRestaurantsPage/DesktopRestaurants";
 import HomePage from "../pages/HomePage/HomePage";
@@ -22,7 +25,6 @@ const Routing=()=>{
             <Routes>
                 <Route path="/" >
                 <Route index element={<HomePage />} />
-                <Route path="Chefs" element={<Chefs />} />
                 {windowSize! < 1024 &&
                 <>
                     <Route path="Restaurants" element={<Restaurants />} />
@@ -35,6 +37,22 @@ const Routing=()=>{
                     <Route path="Restaurants" element={<DesktopRestaurants />} />
                     <Route path="Restaurants/:restaurant_id" element={<DesktopRestaurantPage />} />
                 </>
+                }
+                {windowSize! < 1024 &&
+                <>
+                    <Route path="Chefs" element={<Chefs />} />
+                    <Route path="Chefs/:chef_id" element={<ChefPage />} />
+
+                </>
+
+                }
+                {windowSize! >= 1024 &&
+                <>
+                    <Route path="Chefs" element={<DesktopChefs />} />
+                    <Route path="Chefs/:chef_id" element={<DesktopChefPage />} />
+
+                </>
+                
                 }
 
                 </Route>
