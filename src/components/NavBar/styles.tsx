@@ -299,6 +299,7 @@ export const Search_input = styled.input`
 export const On_search_img = styled.div`
 
     background-image: url(${search_img});
+    background-repeat: no-repeat;
     width: 6.3%;
     height: 68%;
 `
@@ -311,6 +312,10 @@ export const Search_text_h1 = styled.h1`
     line-height: 22px;
     letter-spacing: 1.92px;
     color: #000000;
+`
+export const Link_to = styled.a`
+    
+    text-decoration: none;
 `
 
 

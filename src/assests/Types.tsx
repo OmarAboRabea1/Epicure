@@ -20,9 +20,11 @@ export interface Dish{
 }
 
 export interface Chef{
+    _id:number;
     name:string;
-    description:string;
+    age: number;
     restaurants:number[];
-    picture:string;
+    describtion:string;
+    img:string;
 }
 

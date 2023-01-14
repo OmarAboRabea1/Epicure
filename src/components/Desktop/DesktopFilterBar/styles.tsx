@@ -31,7 +31,8 @@ export const Title = styled.h1`
 `
 
 export const Filter_bar = styled.div`
-    width: 89%;
+    margin-top: 50px;
+    width: 40%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -57,7 +58,7 @@ export const Filter_text = styled.button.attrs((props: {underline: boolean}) => 
         font-family: 'Helvetica Neue';
         font-style: normal;
         font-weight: 200;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 5px;
         letter-spacing: 1.3px;
         color: #000000;
@@ -69,7 +70,7 @@ export const Filter_text = styled.button.attrs((props: {underline: boolean}) => 
         font-family: 'Helvetica Neue';
         font-style: normal;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 5px;
         letter-spacing: 1.3px;
         color: #000000;

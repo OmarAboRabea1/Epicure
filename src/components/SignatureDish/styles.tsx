@@ -33,8 +33,7 @@ export const Title = styled.h1`
 export const Card_container = styled.div`
     width: fit-content;
     height: fit-content;
-    padding-left: 20px;
-    padding-right: 20px;
+
 `
 
 export const Swiper_container = styled.div`
@@ -105,31 +104,31 @@ export const DishCard_img = styled.img`
 
 export const DishCard_signature = styled.div.attrs((props: {sigType: string}) => props)`
     ${props => props.sigType === "Spicy" && `
-        height: 30%;
-        width: 100%;
+        height: 100px;
+        width: 70px;
         background-image: url(${spicy});
         background-position: flex-end;
         background-repeat: no-repeat;
 
     `}  
     ${props => props.sigType === "Vegan" && `
-        height: 30%;
-        width: 100%;
+        height: 100px;
+        width: 70px;
         background-image: url(${vegan});
         background-position: flex-end;;
         background-repeat: no-repeat;
     `}
         ${props => props.sigType === "Vegetarian" && `
-        height: 30%;
-        width: 100%;
+        height: 100px;
+        width: 70px;
         background-image: url(${vegetarian});
         background-position: flex-end;;
         background-repeat: no-repeat;
 
     `}
         ${props => props.sigType === "Meat" && `
-        height: 25%;
-        width: 25%;
+        height: 100px;
+        width: 70px;
         background-image: url(${meat});
         background-position: flex-end;;
         background-size: contain;

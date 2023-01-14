@@ -2,15 +2,15 @@ import {useParams} from "react-router-dom";
 import uniqid from "uniqid";
 import { getHoursAndMinutes } from "../../../Helpers/GetHoursAndMinutes";
 import clockIcon from "../../../assests/Icon/Clock.svg"
-import { Container, Cards_container, ResImg, Res_container, Title, Secondary_title, Description, Box } from "../styles";
+import { Container, Cards_container, ResImg, Res_container, Title, Secondary_title, Description, Box, ResImg_box } from "../styles";
 import Header from "../../../components/Header/Header";
 import { AllDishes, AllRestaurants } from "../../../assests/Data";
 import { Dish, Restaurant } from "../../../assests/Types";
 import { useSelector } from "react-redux";
 import CardsDisplay from "./CardsDisplay";
-import Footer from "../../../components/Footer/Footer";
+import DesktopFooter from "../../../components/Desktop/DesktopFooter/Footer";
 
-const RestaurantPage=()=>{
+const DesktopRestaurantPage=()=>{
 const restaurant_id = useParams()["restaurant_id"]
 const restaurants = useSelector((state: any) => state.restaurants.value)
 
@@ -40,7 +40,9 @@ const is_open=(item:Restaurant)=>{
                     restaurants.map((item:Restaurant, key:number) => (
                         item.name == restaurant_id &&
                         <>
-                        <ResImg src={item.img} key={key}/>
+                        <ResImg_box>
+                            <ResImg src={item.img} key={key}/>
+                        </ResImg_box>
                         <Description>
                             <Title>{item.name}</Title>
                             <Secondary_title>{item.chef}</Secondary_title>
@@ -59,10 +61,10 @@ const is_open=(item:Restaurant)=>{
                 }
 
             </Res_container>  
-            <Footer/>      
+            <DesktopFooter/>      
         </Container>
         }
         </>
     )
 }
-export default RestaurantPage;
+export default DesktopRestaurantPage;

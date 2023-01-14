@@ -14,15 +14,12 @@ export const Hero_box = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 50px;
     width: 100%;
     height: 696px;
     background:url(${heroSearch});
     background-position: center;
     background-size: 100vmax;
     background-repeat: no-repeat;
-
-
 `   
 
 export const SearchBar_box = styled.div`
@@ -33,6 +30,7 @@ export const SearchBar_box = styled.div`
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
     gap: 18px;
     width: 52%;
     height: 30%;
@@ -103,7 +101,7 @@ export const Search_result_container = styled.div`
     width: 90%;
     height: 150px;
     position: absolute;
-    top: 259px;
+    top: 210px;
     margin-top: 5px;
     display: flex;
     flex-direction: column;

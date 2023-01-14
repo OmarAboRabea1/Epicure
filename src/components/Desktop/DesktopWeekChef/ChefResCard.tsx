@@ -8,7 +8,7 @@ export const ChefResCard=(restaurant: cardProps)=>{
     return(
         <Card_container2>
             <RestaurantCard>
-                <RestaurantCard_img/>
+                <RestaurantCard_img src= {restaurant.restaurant?.img}/>
                 <RestaurantCard_desc>
                     <ResName>{restaurant.restaurant?.name}</ResName>                    
                 </RestaurantCard_desc>

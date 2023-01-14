@@ -2,11 +2,18 @@ import { useState } from "react";
 import { AllChefs, AllDishes, AllRestaurants, search_names } from "../../../assests/Data"
 import { Search_active, Search_box, Search_input, On_search_img, Search_result_newContainer } from "./styles";
 import { Search_result_table, Search_result_container, Search_text_p } from "../../SearchBar/styles"
+import { Link_to } from "../../NavBar/styles";
+import { useSelector } from "react-redux";
+import { Chef, Dish, Restaurant } from "../../../assests/Types";
 
 interface props{
     menu : boolean
 }
 export const SearchMenuActive =(funcProops: props)=>{
+
+  const all_retaurants = useSelector((state: any) => state.restaurants.value)
+  const all_chefs = useSelector((state: any) => state.chefs.value)
+  const all_dishes = useSelector((state: any) => state.dishes.value)
     const [search, setSearch] = useState('');
 
     const handleSearch = (event:React.ChangeEvent<HTMLInputElement>) => {
@@ -14,17 +21,17 @@ export const SearchMenuActive =(funcProops: props)=>{
       };
     
       var data = {
-        nodes: AllRestaurants.filter((item) =>
+        nodes: all_retaurants.filter((item: Restaurant) =>
           item.name.toLowerCase().includes(search.toLowerCase())
         ),
       };
       var results2 = {
-        nodes: AllDishes.filter((item) =>
+        nodes: all_dishes.filter((item: Dish) =>
           item.name.toLowerCase().includes(search.toLowerCase())
         ),
       };
       var results3 = {
-        nodes: AllChefs.filter((item) =>
+        nodes: all_chefs.filter((item: Chef) =>
           item.name.toLowerCase().includes(search.toLowerCase())
         ),
       };
@@ -35,37 +42,40 @@ export const SearchMenuActive =(funcProops: props)=>{
             <On_search_img/>
             <Search_input placeholder="Search for restaurant cuisine, chef" onChange={handleSearch}/>
             {
-                    search.length > 0 && (data.nodes.length> 0 || results2.nodes.length> 0 || results3.nodes.length> 0) &&
-                <Search_result_newContainer>
-                    
-                    <Search_result_table>
-                    {data.nodes.length>0 &&
-                    <Search_text_p>Restaurants:</Search_text_p>
-                    }
-                    <>
-                    {data.nodes.map(item=>{
-                        return <a href="#">{item.name}</a>
-                    })}
-                    </>
-                    {results2.nodes.length>0 &&
-                    <Search_text_p>Dishes:</Search_text_p>
-                    }
-                    <>
-                    {results2.nodes.map(item=>{
-                        return <a href="#">{item.name}</a> 
-                    })}
-                    </>
-                    {results3.nodes.length>0 &&
-                    <Search_text_p>Chefs:</Search_text_p>
-                    }                   
-                    <>
-                    {results3.nodes.map(item=>{
-                        return <a href="#">{item.name}</a>
-                    })}
-                    </>
-                    </Search_result_table>
-                </Search_result_newContainer>
-                }
+                  search.length > 0 && (data.nodes.length> 0 || results2.nodes.length> 0 || results3.nodes.length> 0) &&
+              <Search_result_newContainer>
+                  
+                  <Search_result_table>
+                  {data.nodes.length>0 &&
+                  <Search_text_p>Restaurants:</Search_text_p>
+                  }
+                  <>
+                  {data.nodes.map((item: { name: string })=>{
+                      let url = `/Restaurants/${item.name}` 
+                      return <Link_to href= {url}>{item.name}</Link_to>
+                  })}
+                  </>
+                  {results2.nodes.length>0 &&
+                  <Search_text_p>Dishes:</Search_text_p>
+                  }
+                  <>
+                  {results2.nodes.map((item: { name: string })=>{
+                      let url = `/Restaurants/${item.name}` 
+                      return <Link_to href={url}>{item.name}</Link_to> 
+                  })}
+                  </>
+                  {results3.nodes.length>0 &&
+                  <Search_text_p>Chefs:</Search_text_p>
+                  }                   
+                  <>
+                  {results3.nodes.map((item: { name: string })=>{
+                      let url = `/Chefs/${item.name}` 
+                      return <Link_to href={url}>{item.name}</Link_to>
+                  })}
+                  </>
+                  </Search_result_table>
+              </Search_result_newContainer>
+              }
         </Search_box>
     </Search_active>
     )

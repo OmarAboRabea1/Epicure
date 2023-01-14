@@ -74,9 +74,11 @@ const DesktopNavBar=()=>{
         <Nav_Container>
             <StyledNavBar>
                 <Left_nav>
-                    <Logo_img/>
+                    <NavBar_text href="/">
+                        <Logo_img/>
+                    </NavBar_text>
                     <Text_box>
-                        <NavBar_text>Epicure</NavBar_text>
+                        <NavBar_text href="/">Epicure</NavBar_text>
                     </Text_box>
                     <Text_box>
                         <NavBar_text2 href="/Restaurants">Restaurants</NavBar_text2>

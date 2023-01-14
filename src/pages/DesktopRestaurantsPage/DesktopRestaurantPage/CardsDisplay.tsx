@@ -4,9 +4,9 @@ import { AllDishes, AllRestaurants } from "../../../assests/Data";
 import { Dish, Restaurant } from "../../../assests/Types";
 import { useEffect, useState } from "react";
 import filter from 'lodash/filter';
-import FilterInResPage from "../../../components/FilterInResPage/FilterInResPage";
-import { DishCard } from "../../../components/SignatureDish/DishCard";
 import { useSelector } from "react-redux";
+import FilterInResPage from "../../../components/Desktop/DesktopFilterInResPage/FilterInResPage";
+import { DishCard } from "../../../components/Desktop/DesktopSignatureDish/DishCard";
 
 const CardsDisplay=()=>{
 

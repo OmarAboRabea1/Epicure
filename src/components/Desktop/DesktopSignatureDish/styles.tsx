@@ -49,7 +49,7 @@ export const Dishes_container = styled.div`
 
 export const DishesCard = styled.div`
     width: 245px;
-    height: 388px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -93,11 +93,9 @@ export const DishIngredients = styled.h1`
     color: #000000;
 `
 
-export const DishCard_img = styled.div`
+export const DishCard_img = styled.img`
     height: 40%;
     width: 100%;
-    background-image: url(${claro_Res}) ;
-    background-repeat: no-repeat;
 
 
 `
@@ -134,7 +132,7 @@ export const DishPrice = styled.h1`
 
 
 export const Shekel_sign = styled.div`
-    height: 45%;
+    height: 15px;
     width: 15%;
     background-image: url(${shekel_sign}) ;
     background-repeat: no-repeat;

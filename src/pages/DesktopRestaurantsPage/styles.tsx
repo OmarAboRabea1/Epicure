@@ -8,15 +8,23 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
 `
+export const DesktopContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`
 export const Cards_container = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    gap: 25px;
+    justify-content: center;
+    gap: 15px;
 `
 export const Cards_container2 = styled.div`
     width: 80%;
@@ -69,8 +77,20 @@ export const UnderlinedSpan = styled.span`
     text-decoration: none;
  `
 
-export const ResImg = styled.img`   
+export const ResImg = styled.img` 
+    width: 80%;
+    height: 450px;
+    background-position: center;
 `
+
+export const ResImg_box = styled.div` 
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 export const Res_container = styled.div`
     width: 100%;
     height: 100%;
@@ -81,9 +101,14 @@ export const Res_container = styled.div`
 
 export const Description = styled.div`
 
-    width: fit-content;
+    width: 100%;
     height: fit-content;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
 
 `
 export const Box = styled.div`

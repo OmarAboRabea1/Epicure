@@ -5,12 +5,12 @@ import uniqid from "uniqid";
 
 import { Container, UnderlinedSpan, Title, Title_box, Cards_container, ResLink } from "./styles";
 import { Restaurant } from "../../assests/Types";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getHoursAndMinutes } from "../../Helpers/GetHoursAndMinutes";
 import { useSelector } from "react-redux";
 const restaurants = AllRestaurants;
 
-const filter_res=(restaurants: Restaurant[])=>{
+const filter_res=(restaurants: Restaurant[]) => {
     var openRestaurants: Array<Restaurant> = [] 
     const currentTime = new Date();
     const hours = currentTime.getHours();
@@ -28,6 +28,7 @@ const filter_res=(restaurants: Restaurant[])=>{
     return openRestaurants
 }
 
+
 const OpenRes=()=>{
 
     const all_retaurants = useSelector((state: any) => state.restaurants.value)
@@ -35,24 +36,27 @@ const OpenRes=()=>{
 
     useEffect(()=>{
         const filteredRestaurants = filter_res(all_retaurants);
-        setFilteredRes(filteredRestaurants)
+        setFilteredRes(filteredRestaurants);
     },[])
 
     
     return(
+        <>
+        {all_retaurants.length > 0 && 
         <Container>
             <Cards_container>
                 {
-                    filteredRes.map((item) => (
+                    filteredRes.map((item, key:number) => (
                         
-                        <ResLink href={item && "/Restaurants/" + item.name } key={uniqid()}>
-                            <ResCard restaurant= {item} key={uniqid()}/>
+                        <ResLink href={item && "/Restaurants/" + item.name } key={key}>
+                            <ResCard restaurant= {item} key={key}/>
                         </ResLink>                    
                     ))
                 }
             </Cards_container>        
         </Container>
-        
+        }
+        </>
     )
 }
 export default OpenRes;

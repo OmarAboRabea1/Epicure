@@ -5,10 +5,10 @@ import uniqid from "uniqid";
 
 import { Container, UnderlinedSpan, Title, Title_box, Cards_container, ResLink } from "./styles";
 import { Restaurant } from "../../assests/Types";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 const restaurants = AllRestaurants;
-const filter_res=(restaurants: Restaurant[])=>{
+const filter_res2=(restaurants: Restaurant[]) => {
     var mostRestaurants: Array<Restaurant> = [] 
     restaurants.map((item:Restaurant) => {
         if(Number(item.establishedAt) < 2012){
@@ -18,31 +18,33 @@ const filter_res=(restaurants: Restaurant[])=>{
     return mostRestaurants
 }
 const MostRes=()=>{
-
+    
     const all_retaurants = useSelector((state: any) => state.restaurants.value)
     const [filteredRes, setFilteredRes] = useState<Array<Restaurant>>([])
 
-
-
     useEffect(()=>{
-        const filteredRestaurants = filter_res(all_retaurants);
+        const filteredRestaurants = filter_res2(all_retaurants);
         setFilteredRes(filteredRestaurants)
-    },[])
+    }, [])
 
     
     return(
+        <>
+        {filteredRes.length > 0 && 
         <Container>
             <Cards_container>
                 {
-                    filteredRes.map((item) => (
+                    filteredRes.map((item: Restaurant, key: number) => (
                         
-                        <ResLink href={item && "/Restaurants/" + item.name } key={uniqid()}>
-                            <ResCard restaurant= {item} key={uniqid()}/>
+                        <ResLink href={item && "/Restaurants/" + item.name } key={key}>
+                            <ResCard restaurant= {item} key={key}/>
                         </ResLink>                    
                     ))
                 }
             </Cards_container>        
         </Container>
+        }
+        </>
         
     )
 }

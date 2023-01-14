@@ -11,27 +11,28 @@ export const WeekChefContainer = styled.div`
     align-items: flex-start;
 
 `
-export const ChefImage_box = styled.div`
+export const ChefImage_box = styled.a`
     width: 90%;
     height: 260px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     
 `
 
 export const Chef_image = styled.img`
-    width: 100%;
+    width: 52%;
     height: 100%;
 `
 
 export const ChefName_box = styled.div`
     width: 90%;
-    height: 6.5%;
+    height: fit-content;
     text-align: center;
     position: absolute;
-    bottom: -84.8rem;
+    bottom: 0px;
     background: rgba(255, 255, 255, 0.8);
 `
 
@@ -42,7 +43,7 @@ export const ChefName_text = styled.h1`
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 47px;
+    line-height: 25px;
     letter-spacing: 2.67px;
     color: #000000;
 

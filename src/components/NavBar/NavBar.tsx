@@ -6,7 +6,7 @@ import { SearchMenuActive } from "./SearchMenuActive";
 
 
 import { Nav_Container, StyledNavBar, Left_nav, Right_nav_visible, Center_nav_visible, Hamburger, Burger_bar, Logo_img, SearchIcon, UserIcon, 
-    CartIcon,  Cart_active, TheX, On_cart, On_cart_img, Search_text, Search_text_h1, Box_for_serch } from "./styles";
+    CartIcon,  Cart_active, TheX, On_cart, On_cart_img, Search_text, Search_text_h1, Box_for_serch, Link_to } from "./styles";
 import { UserMenuActive } from "./UserMenuActive";
 
 const NavBar=()=>{
@@ -81,7 +81,9 @@ const NavBar=()=>{
                     </Hamburger>
                 </Left_nav>
                 <Center_nav_visible active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)}>
-                    <Logo_img/>
+                    <Link_to href="/">
+                        <Logo_img/>
+                    </Link_to>
                 </Center_nav_visible>
                 <Right_nav_visible active = {(!burgerMenu) && (!searchMenu) && (!cartMenu) && (!userMenu)}>
                     <SearchIcon onClick={()=>{setSearch(true) }}/>

@@ -8,8 +8,8 @@ export const DesktopPopularRes = ()=>{
                 <Title>popular restaurant in epicure:</Title>  
                 <ResCardGenerator/>
                 <AllRes_box>
-                    <AllRes_click_arrows href="#"/>
-                    <AllRes_click href="#">All Restaurants</AllRes_click>
+                    <AllRes_click_arrows href="/Restaurants"/>
+                    <AllRes_click href="/Restaurants">All Restaurants</AllRes_click>
                 </AllRes_box>
             </PopualrRes_Container>
             

@@ -1,15 +1,16 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: flex;
     align-items: center;
+    bottom: 0px;
     justify-content: center;
 `
 
 export const Footer_Container = styled.div`
-    height: 100%;
+    height: fit-content;
     width: 40%;
     display: flex;
     justify-content: space-between;

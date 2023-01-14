@@ -17,9 +17,11 @@ export const Nav_Container = styled.div`
     display: flex;
     width: 100%;
     height: 50px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #ffffff;
+    position: relative;
     box-shadow: 0 1px 3px rgba(15, 15, 15, 0.13);
 
 `
@@ -53,14 +55,15 @@ export const Text_box = styled.div`
     text-align: center;
 `
 
-export const NavBar_text = styled.p`
+export const NavBar_text = styled.a`
     font-family: 'Helvetica Neue';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 250;
     font-size: 27px;
     line-height: 33px;
     letter-spacing: 1.35px;
     color: #000000;
+    text-decoration: none;
 
 
 
@@ -221,7 +224,7 @@ ${props => props.active === false && `
         gap: 24px;
         position: absolute;
         width: 100%;
-        height: 294px;
+        height: 200px;
         top: 46px;
         background: #ffffff;
         box-shadow: 2px 4px 10px rgba(175, 175, 175, 0.25);
@@ -277,7 +280,7 @@ export const On_search_img = styled.div`
 
     background-image: url(${search_img});
     width: 6.3%;
-    height: 68%;
+    height: 100%;
     background-repeat: no-repeat;
 `
 
@@ -638,7 +641,7 @@ export const Search_result_newContainer = styled.div`
     width: 90%;
     height: 150px;
     position: absolute;
-    top: 59px;
+    top: 40px;
     margin-top: 5px;
     display: flex;
     flex-direction: column;

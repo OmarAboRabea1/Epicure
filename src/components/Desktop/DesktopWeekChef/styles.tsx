@@ -26,31 +26,29 @@ export const Title_for_chef = styled.div`
     text-align: center;
 `
 
-export const ChefImage_box = styled.div`
+export const ChefImage_box = styled.a`
     width: 40%;
     height: 300px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     
 `
 
-export const Chef_image = styled.div`
-    width: 100%;
+export const Chef_image = styled.img`
+    width: 75%;
     height: 100%;
-    background-image: url(${yossi});
-    background-repeat: no-repeat;
-    background-position: center;
 
 `
 
 export const ChefName_box = styled.div`
-    width: 33%;
-    height: 6.5%;
+    width: 75%;
+    height: fit-content;
     text-align: center;
     position: absolute;
-    bottom: -89.8rem;
+    bottom: 0px;
     background: rgba(255, 255, 255, 0.8);
 `
 export const ChefName_text_box = styled.div`
@@ -76,6 +74,7 @@ export const Title_for_chef_res = styled.div`
     width: fit-content;
     height: fit-content;
     margin-left: 70px;
+    margin-top: 100px;
 `
 
 export const ChefDesc_box = styled.div`
@@ -134,14 +133,9 @@ export const ResChef = styled.h1`
     color: #000000;
 `
 
-export const RestaurantCard_img = styled.div`
+export const RestaurantCard_img = styled.img`
     height: 100%;
     width: 100%;
-    background-image: url(${onza_Res}) ;
-    background-position: center;
-    background-repeat: no-repeat;
-
-
 `
 export const Card_container2 = styled.div`
     width: fit-content;

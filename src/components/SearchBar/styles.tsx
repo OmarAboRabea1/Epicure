@@ -99,13 +99,14 @@ export const Search_result_container = styled.div`
     width: 90%;
     height: 150px;
     position: absolute;
-    top: 259px;
+    top: 275px;
     margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     overflow-y: scroll;
     background: rgba(255, 255, 255, 0.95);
+    
 `
 export const Search_result_table = styled.div`
     width: 80%;

@@ -57,7 +57,7 @@ export const Filter_text = styled.button.attrs((props: {underline: boolean}) => 
         font-family: 'Helvetica Neue';
         font-style: normal;
         font-weight: 200;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 5px;
         letter-spacing: 1.3px;
         color: #000000;
@@ -69,7 +69,7 @@ export const Filter_text = styled.button.attrs((props: {underline: boolean}) => 
         font-family: 'Helvetica Neue';
         font-style: normal;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 5px;
         letter-spacing: 1.3px;
         color: #000000;

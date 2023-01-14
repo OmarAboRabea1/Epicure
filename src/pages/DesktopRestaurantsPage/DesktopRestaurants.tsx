@@ -2,14 +2,14 @@ import Header from "../../components/Header/Header";
 import { useState } from 'react';
 
 import { Container, Title, Title_box } from "./styles";
-import FilterBar from "../../components/FilterBar/FilterBar";
 import AllRes from "./AllRes";
 import NewRes from "./NewRes";
 import MostRes from "./MostRes";
 import OpenRes from "./OpenRes";
-import Footer from "../../components/Footer/Footer";
+import FilterBar from "../../components/Desktop/DesktopFilterBar/DesktopFilterBar";
+import DesktopFooter from "../../components/Desktop/DesktopFooter/Footer";
 
-const Restaurants=()=>{
+const DesktopRestaurants=()=>{
     const [allRes, setAllRes] = useState(true)
     const [newRes, setNewRes] = useState(false)
     const [mostRes, setMostRes] = useState(false)
@@ -26,9 +26,7 @@ const Restaurants=()=>{
     return(
         <Container>
             <Header/>
-            <Title_box>
-                <Title>Restaurants</Title>
-            </Title_box>
+
             <FilterBar onChange={handleChange}/>
             {
                 allRes && !newRes && !mostRes && !openRes &&
@@ -36,25 +34,28 @@ const Restaurants=()=>{
                 <AllRes/>
                 </>
             }
-                        {
+            {
                 !allRes && newRes && !mostRes && !openRes &&
                 <>
                 <NewRes/>
                 </>
-            }            {
+            }            
+            {
                 !allRes && !newRes && mostRes && !openRes &&
                 <>
                 <MostRes/>
                 </>
-            }            {
+            }            
+            {
                 !allRes && !newRes && !mostRes && openRes &&
                 <>
                 <OpenRes/>
                 </>
             }
-            <Footer/>
+            <DesktopFooter/>      
+
         </Container>
         
     )
 }
-export default Restaurants;
+export default DesktopRestaurants;

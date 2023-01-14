@@ -106,6 +106,7 @@ export const Swiper_container = styled.div`
 export const Card_container2 = styled.div`
     width: fit-content;
     height: fit-content;
+    display: flex;
     padding-left: 20px;
     padding-right: 20px;
 `

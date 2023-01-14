@@ -3,41 +3,37 @@ import { ChefDesc_box, ChefImage_box, ChefName_box, ChefName_text, Chef_image, W
 import {AllRes_box, AllRes_click, AllRes_click_arrows, Swiper_container} from "../PopularRes/styles";
 import { ChefResCard } from "./ChefResCard";
 import { chef_const } from "../../constants/Restaurants4Chefs";
-import { GetRestaurants } from "../../Helpers/GetRestaurants";
-import uniqid from "uniqid";
 import { useSelector } from "react-redux";
 import { Restaurant } from "../../assests/Types";
-import { useEffect, useState } from "react";
-let i = 0;
+import { ResLink } from "../../pages/RestaurantsPage/styles";
 
 
 export const WeekChef=()=>{
-    const [res, setRes] = useState<any>()
     
     const chef_with_retaurants = useSelector((state: any) => state.chef.value)
-    // const restaurants = chef_with_retaurants[0];
-
 
     return(
         <>
         {chef_with_retaurants.length > 0 && 
         <WeekChefContainer>
             <Title>Chef of the week:</Title>
-            <ChefImage_box>
+            <ChefImage_box href={"/Chefs/" + chef_with_retaurants[0].name}>
                 <Chef_image src={chef_with_retaurants[0].img}/>
                 <ChefName_box>
                     <ChefName_text>{chef_with_retaurants[0].name}</ChefName_text>
                 </ChefName_box>
             </ChefImage_box>
             <ChefDesc_box>
-            <ChefName_text>{chef_const.description}</ChefName_text>
+            <ChefName_text>{chef_with_retaurants[0].describtion}</ChefName_text>
             </ChefDesc_box>
             <Title>Chef of the week:</Title>
             <Swiper_container>
                 {
                 chef_with_retaurants[0].restaurants.map((item:Restaurant, key:number) => (
-                    
-                    <ChefResCard restaurant= {item} key={key}/>
+
+                    <ResLink href={item && "/Restaurants/" + item.name } key={key}>
+                        <ChefResCard restaurant= {item} key={key}/>
+                    </ResLink>
                 ))
                 }
         

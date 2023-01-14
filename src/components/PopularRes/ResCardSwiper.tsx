@@ -4,17 +4,10 @@ import { useSelector } from "react-redux";
 import { Restaurant } from "../../assests/Types";
 import { ResLink } from "../../pages/RestaurantsPage/styles";
 
-
-// const card_props = {
-//     res: 
-// }
-
-
-
 export const ResCardSwiper=()=>{
     
     const allrestaurants = useSelector((state: any) => state.restaurants.value)
-    const restaurants = allrestaurants.slice(0,4);
+    const restaurants = allrestaurants
     return(
         <Swiper_container>
 
